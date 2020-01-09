@@ -1,0 +1,21 @@
+[Output]
+Filename = 'trajectories.h5'
+NumTrajectories = 1000
+Duration = 3.33564e-10   # seconds
+dt = 1.6678205e-12       # seconds
+
+[Beam]
+q0 = -1.0                # particle charge (in units of positron charge)
+m0 = 1.0                 # particle mass (in units of electron mass)
+gamma0 = 20000.0
+sigma_x = 10e-6          # meters
+sigma_y = 10e-6          # meters
+sigma_z = 1e-12          # meters
+eps_x = 1e-7             # normalized emittance (m rad)
+eps_y = 1e-7             # normalized emittance (m rad)
+dp_p0 = 1e-3             # relative momentum spread
+
+[[Fields]]
+Type = 'Undulator'
+Wavelength = 10e-3       # meters
+K = 1.0                  # undulator parameter = eB/(kmc)

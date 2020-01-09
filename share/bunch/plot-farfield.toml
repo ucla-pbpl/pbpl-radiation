@@ -1,0 +1,130 @@
+[Files]
+Input = 'farfield.h5'
+Output = 'farfield.pdf'
+
+[[Figure]]
+Type = '1D'
+FigSize = [244, 140]
+XAxis = ['energy', 'Photon energy (keV)', 'keV', '(0.0, 300.0)']
+YAxis = ['energy_spectral_density', 'Energy spectral density (keV/keV)', 'keV/keV', '(0.0, 40.0)']
+
+[[Figure.Annotation]]
+Text = [
+ "'$\\gamma_0$ = 20000'",
+ "'$K$ = 1.0'",
+ "'$\\lambda_u$ = 10 mm'",
+ "'$L_u$ = 100 mm'",
+ "'$\\sigma_x = \\sigma_y =$ 10 $\\mu$m'",
+ "'$\\epsilon_x = \\epsilon_y = 10^{-7}$ m$\\cdot$rad'",
+ "'$\\sigma_z =$ 1 pm'",
+ "'$\\delta p/p_0$ = 10$^{-3}$'",
+ "'Number of trajectories = 1000'",
+ "'Radiated energy = {:.1f} MeV'.format(density_integral/MeV)"]
+Location = [0.5, 0.95]
+
+[[Figure]]
+Type = '2D'
+FigSize = [244, 190]
+NumContours = 21
+InterpolationGrid = [200,200]
+Smoothing = 1.5
+XAxis = ['energy', 'Photon energy (keV)', 'keV', '(0.0, 300.0)']
+YAxis = ['thetax', '$\theta_x$ (urad)', 'urad', '(-60, 60)']
+ZAxis = ['thetay', '$\theta_y$ (urad)', 'urad', 'None']
+CBar = ['1.0', 'Spectral density (keV/(urad$\cdot$keV))', 'keV/(urad*keV)']
+
+[Figure.HarmonicLines]
+K = 1.0
+gamma0 = 20000.0
+lambda_u = '10*mm'
+plot_args = "{'lw':0.4, 'color':'k', 'ls':':'}"
+harmonics = [0.3, 1.2, 2.3, 3.4, 4.5, 5.5]
+
+[[Figure]]
+Type = '2D'
+FigSize = [244, 180]
+NumContours = 6
+AspectRatio = 1.0
+InterpolationGrid = [200,200]
+Smoothing = 1.0
+XAxis = ['thetax', '$\theta_x$ (urad)', 'urad', '(-60, 60)']
+YAxis = ['thetay', '$\theta_y$ (urad)', 'urad', '(-60, 60)']
+ZAxis = ['energy', 'Photon energy (keV)', 'keV', 'None']
+CBar = ['1.0', 'Spectral density (keV/urad$^2$)', 'keV/urad**2']
+
+[Figure.HarmonicCut]
+K = 1.0
+gamma0 = 20000.0
+lambda_u = '10*mm'
+cut = [0.5, 1.5]
+
+[[Figure.Annotation]]
+Text = ["'First harmonic'"]
+Location = [0.05, 0.95]
+
+[[Figure]]
+Type = '2D'
+FigSize = [244, 180]
+NumContours = 6
+AspectRatio = 1.0
+InterpolationGrid = [200,200]
+Smoothing = 4.0
+XAxis = ['thetax', '$\theta_x$ (urad)', 'urad', '(-60, 60)']
+YAxis = ['thetay', '$\theta_y$ (urad)', 'urad', '(-60, 60)']
+ZAxis = ['energy', 'Photon energy (keV)', 'keV', 'None']
+CBar = ['1.0', 'Spectral density (eV/urad$^2$)', 'eV/urad**2']
+
+[Figure.HarmonicCut]
+K = 1.0
+gamma0 = 20000.0
+lambda_u = '10*mm'
+cut = [1.5, 2.5]
+
+[[Figure.Annotation]]
+Text = ["'Second harmonic'"]
+Location = [0.05, 0.95]
+
+
+[[Figure]]
+Type = '2D'
+FigSize = [244, 180]
+NumContours = 6
+AspectRatio = 1.0
+InterpolationGrid = [200,200]
+Smoothing = 1.0
+XAxis = ['thetax', '$\theta_x$ (urad)', 'urad', '(-60, 60)']
+YAxis = ['thetay', '$\theta_y$ (urad)', 'urad', '(-60, 60)']
+ZAxis = ['energy', 'Photon energy (keV)', 'keV', 'None']
+CBar = ['1.0', 'Spectral density (keV/urad$^2$)', 'keV/urad**2']
+
+[Figure.HarmonicCut]
+K = 1.0
+gamma0 = 20000.0
+lambda_u = '10*mm'
+cut = [2.5, 3.5]
+
+[[Figure.Annotation]]
+Text = ["'Third harmonic'"]
+Location = [0.05, 0.95]
+
+[[Figure]]
+Type = '2D'
+FigSize = [244, 180]
+NumContours = 6
+AspectRatio = 1.0
+InterpolationGrid = [200,200]
+Smoothing = 4.0
+XAxis = ['thetax', '$\theta_x$ (urad)', 'urad', '(-60, 60)']
+YAxis = ['thetay', '$\theta_y$ (urad)', 'urad', '(-60, 60)']
+ZAxis = ['energy', 'Photon energy (keV)', 'keV', 'None']
+CBar = ['1.0', 'Spectral density (eV/urad$^2$)', 'eV/urad**2']
+
+[Figure.HarmonicCut]
+K = 1.0
+gamma0 = 20000.0
+lambda_u = '10*mm'
+cut = [3.5, 4.5]
+
+[[Figure.Annotation]]
+Text = ["'Fourth harmonic'"]
+Location = [0.05, 0.95]

@@ -1,0 +1,8 @@
+[Input]
+Filename = 'trajectories.h5'
+
+[Output]
+Filename = 'farfield.h5'
+energy = 'keV*linspace(0.0, 300.0, 151)'
+thetax = 'linspace(-0.0001, 0.0001, 201)'
+thetay = 'linspace(-0.0001, 0.0001, 201)'
